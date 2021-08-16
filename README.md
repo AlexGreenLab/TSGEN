@@ -14,7 +14,7 @@ The software here is compatible with versions 3.1 and 3.2 of NUPACK. Follow the 
 
 The software assumes the user creates an .csv file in the subfolder "/input" with the requisite sequence information. design name, the wild-type target sequence, the mutated target sequence, and the first 29 bases of the output gene. For the target sequence input, the mutation position should be at 15 bases away from the 5’ end of the transcript. Sequences should be specified in the 5’ to 3’ direction.
 
-By default, the code will search for an input file named "design_input_file_old.csv".
+By default, the code will search for an input file named "design_input_file.csv".
 
 ## Running the Software
 
@@ -44,7 +44,7 @@ toehold_switch_design_run_GCM(num_designs, TSGEN2, EAR2_H22, input_file, PARALLE
 
 `EAR2_H22` should be set to 1 if you want to generate Series B designs (Zika 2016 paper). Set to 0 if you do not wish the software to return this type of design.
 
-`input_file` is a text string specifying the csv file with sequences required for designs. The file must still be within 'input' folder.
+`input_file` is a text string specifying the csv file with sequences required for designs. The file must still be within an 'input' sub-folder from the working directory.
 
 `PARALLEL` should be set to 1 if you want to run on your local computer using multiple cores. Otherwise, set to 0.
  
@@ -58,7 +58,7 @@ Default input values:
 num_designs = 6
 TSGEN2 = 1; 
 EAR2_H22 = 1; 
-input_file = 'design_input_file_old.csv';
+input_file = 'design_input_file.csv';
 PARALLEL = 1; 
 ```
 
