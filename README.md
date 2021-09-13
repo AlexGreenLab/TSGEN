@@ -14,7 +14,7 @@ The software here is compatible with versions 3.1 and 3.2 of NUPACK. Follow the 
 
 The software assumes the user creates an .csv file in the subfolder "/input" with the requisite sequence information. design name, the wild-type target sequence, the mutated target sequence, and the first 29 bases of the output gene. For the target sequence input, the mutation position should be at 15 bases away from the 5’ end of the transcript. Sequences should be specified in the 5’ to 3’ direction.
 
-By default, the code will search for an input file named "design_input_file_old.csv".
+By default, the code will search for an input file named "design_input_file.csv".
 
 ## Running the Software
 
