@@ -19,24 +19,24 @@ By default, the code will search for an input file named "design_input_file.csv"
 ## Running the Software
 
 
-To run the Toehold Switch Design Software, a user will first need to navigate to the software folder with the main function "toehold_switch_design_run_GCM.m" and provide a csv file with the required sequence content outlined above. 
+To run the Toehold Switch Design Software, a user will first need to navigate to the software folder with the main function "toehold_switch_design_run.m" and provide a csv file with the required sequence content outlined above. 
 
 Once the input sequences have been established, the user will want to run the main function:
 
 ```matlab
-toehold_switch_design_run_GCM()
+toehold_switch_design_run()
 
 ```
 The function can be run in its default configuration with no inputs. In this case the software will evauluate the sequences in the file "design_input_file_old.csv" in parallel, producing six designs each of the Series B (EAR2_H22) and Series C (TSgen2) toeholds for the targets and temperature conditions specified in the input file. Users can specify a diferrent number of designs to return by calling the function as:
 
 ```
-toehold_switch_design_run_GCM(n)
+toehold_switch_design_run(n)
 ```
 in which `n` is the number of designs.  
 
 Otherwise, the user can provide five function inputs to modify the run conditions as seen below:
 ```
-toehold_switch_design_run_GCM(num_designs, TSGEN2, EAR2_H22, input_file, PARALLEL)
+toehold_switch_design_run(num_designs, TSGEN2, EAR2_H22, input_file, PARALLEL)
 ```
 ```num_designs``` specifies the number of TSgen2 and EAR_H22 toehold switches to return 
 
@@ -44,7 +44,7 @@ toehold_switch_design_run_GCM(num_designs, TSGEN2, EAR2_H22, input_file, PARALLE
 
 `EAR2_H22` should be set to 1 if you want to generate Series B designs (Zika 2016 paper). Set to 0 if you do not wish the software to return this type of design.
 
-`input_file` is a text string specifying the csv file with sequences required for designs. The file must still be within 'input' folder.
+`input_file` is a text string specifying the csv file with sequences required for designs. The file must still be within an 'input' sub-folder from the working directory.
 
 `PARALLEL` should be set to 1 if you want to run on your local computer using multiple cores. Otherwise, set to 0.
  
@@ -58,7 +58,7 @@ Default input values:
 num_designs = 6
 TSGEN2 = 1; 
 EAR2_H22 = 1; 
-input_file = 'design_input_file_old.csv';
+input_file = 'design_input_file.csv';
 PARALLEL = 1; 
 ```
 
