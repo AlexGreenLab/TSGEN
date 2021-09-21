@@ -40,11 +40,11 @@ toehold_switch_design_run(num_designs, input_file, options)
 ```
 ```num_designs``` specifies the number of toehold switches to return. Set to 6 by default. 
 
-`SeriesA` should be set to 1 if you want to generate Series A designs (Toehold Switch generation 2, Ma et al., OUP Synbio parameters).  Set to 0 if you do not wish the software to return this type of design. Set to 1 by default.
-
-`SeriesB` should be set to 1 if you want to generate Series B designs (Zika 2016 paper). Set to 0 if you do not wish the software to return this type of design. Set to 1 by default
-
 `input_file` is a text string specifying the csv file with sequences required for designs. The file must still be within an 'input' sub-folder from the working directory. Set to 'design_input_file.csv' by default.
+
+`SeriesA` should be set to 1 if you want to generate Series A designs (Toehold Switch generation 2, Green et al., 2014).  Set to 0 if you do not wish the software to return this type of design. Set to 1 by default.
+
+`SeriesB` should be set to 1 if you want to generate Series B designs (Ma et al., 2018 paper). Set to 0 if you do not wish the software to return this type of design. Set to 1 by default
 
 `Parallel` should be set to 1 if you want to run on your local computer using multiple cores. Otherwise, set to 0. Set to 1 by default.
 
@@ -62,7 +62,7 @@ SeriesB = 1;
 PARALLEL = 1; 
 ANTISENSE = 0;
 ```
-An example syntax would be:
+An example syntax might be:
 `toehold_switch_design_run(8,'my_sequences.csv','SeriesB',0,'Antisense',1)`
 This returns 8 designs of the SeriesA designs for each input sequence in the 'my_sequences.csv' file, as well as their antisense versions. It returns 0 SeriesB designs for any of the sequences.
 
