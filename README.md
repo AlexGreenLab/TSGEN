@@ -4,7 +4,7 @@ The following code enables the automated design, analysis, and computational scr
 
 ## Installation
 
-The Toehold Switch Design Software runs in MATLAB and uses the NUPACK Software Suite. It is recommended that the user have the Parallel Computing MATLAB Toolbox installed for faster design evaluation.
+The Toehold Switch Design Software runs in MATLAB version 2019b and higher and uses the NUPACK Software Suite. It is recommended that the user have the Parallel Computing MATLAB Toolbox installed for faster design evaluation.
 
 The software here is compatible with versions 3.1 and 3.2 of NUPACK. Follow the installation instructions at [NUPACK.org](http://www.nupack.org/) to install it. 
 
